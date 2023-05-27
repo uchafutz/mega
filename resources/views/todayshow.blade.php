@@ -6,22 +6,19 @@
 
                 <div class="container">
                     <div class="row">
-
+                        
                         <div class="col-md-12">
                             <div class="sportsmagazine-player-thumb-wrap">
-                                <figure><img src="extra-images/player-text-img.png" alt=""></figure>
+                                <figure><img src="{{$myorder->mkeka->picture}}" alt=""></figure>
                                 <div class="sportsmagazine-player-thumb-text">
-                                    <h2>10900 TSH</h2>
-                                    <h3>Olds <br><span> 340</span></h3>
+                                    <h2>{{$myorder->amount}} TSH</h2>
+                                    <h3>Olds<br><span> {{$myorder->mkeka->total_olds}}</span></h3>
                                     <ul class="sportsmagazine-player-info">
                                         <li>
-                                            <h5>Nationality:</h5>
-                                            <span>Benjamin Henrichs</span>
+                                            <h5> {{$myorder->status}}</h5>
+                                            <span>Status</span>
                                         </li>
-                                        <li>
-                                            <h5>Date Of Birth:</h5>
-                                            <span>August 21st 1995</span>
-                                        </li>
+                                        
                                       
                                     </ul>
                                 </div>
@@ -35,12 +32,15 @@
 <div class="sportsmagazine-main-section">
   <div class="container">
 	<div class="row">
+        <div class="sportsmagazine-fancy-title">
+        <h2>MPESA LIPA NO 18299 Please Confrim Your Payment</h2>
+     </div> 
          <div class="row container my-3">
                 <div class="col-sm-3">
                     <div class="border-danger bg-white py-3 text-start">
-                        <img src="{{ asset('images/brand/mpesaaa.png') }}" alt="Bootstrap" height="30">
+                        {{-- <img src="{{ asset('images/brand/mpesaaa.png') }}" alt="Bootstrap" height="30"> --}}
                         <div class="card-body">
-                            <div class="card-title fw-bold"> M-PESA, *150*00#</div>
+                            <div class="card-title fw-bold"> <b>M-PESA, *150*00#</b></div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Chagua 4 - LIPA kwa M-PESA</li>
                                 <li class="list-group-item">Chagua 1 - LIPA kwa Simu</li>
@@ -55,9 +55,9 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="bg-white py-3 text-start">
-                        <img src="{{ asset('images/brand/tpesa.jpg') }}" alt="Bootstrap" height="30">
+                        {{-- <img src="{{ asset('images/brand/tpesa.jpg') }}" alt="Bootstrap" height="30"> --}}
                         <div class="card-body">
-                            <div class="card-title fw-bold"> TIGOPESA, *150*01#</div>
+                            <div class="card-title fw-bold"><b> TIGOPESA, *150*01#</b></div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Chagua 5 - LIPA kwa SIM</li>
                                 <li class="list-group-item">Chagua 3 - Kwenda mitandao mingine</li>
@@ -71,9 +71,9 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="bg-white py-3 text-start">
-                        <img src="{{ asset('images/brand/airtel.png') }}" alt="Bootstrap" height="30">
+                        {{-- <img src="{{ asset('images/brand/airtel.png') }}" alt="Bootstrap" height="30"> --}}
                         <div class="card-body">
-                            <div class="card-title fw-bold"> AIRTEL MONEY, *150*60#</div>
+                            <div class="card-title fw-bold"> <b>AIRTEL MONEY, *150*60#</b></div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Chagua 5 - Lipa bili</li>
                                 <li class="list-group-item">Chagua 1 - LIPA kwa Simu (Mitandao yote) </li>
@@ -87,9 +87,9 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="bg-white py-3 text-start">
-                        <img src="{{ asset('images/brand/lipa.jpg') }}" alt="Bootstrap" height="30">
+                        {{-- <img src="{{ asset('images/brand/lipa.jpg') }}" alt="Bootstrap" height="30"> --}}
                         <div class="card-body">
-                            <div class="card-title fw-bold"> Kulipa Kutoka MITANDAO MINGINE</div>
+                            <div class="card-title fw-bold"> <b>Kulipa Kutoka MITANDAO MINGINE</b></div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Chagua - LIPA kwa SIMU</li>
                                 <li class="list-group-item">Chagua - Kwenda Mitandao Mingine</li>
@@ -105,14 +105,16 @@
             <div class="row">
          <div class="col-md-9">
             <div class="comment-respond sportsmagazine-contact-form">
+                
                                <div class="sportsmagazine-section-heading"><h2>Confirm Your Payement</h2></div>
-                               <form>
+                               <form method="POST" action="{{route('orders.customer',["order"=>$myorder])}}">
+                                   @csrf
                                     <ul>
                                       
                                         <li class="full-input">
                                             <label>Comment:</label>
                                             <p>
-                                                <textarea name="u_msg" placeholder="Type here"></textarea>
+                                                <textarea name="description" placeholder="Type here"></textarea>
                                                 <span><i class="fa fa-comment"></i></span>
                                             </p>
 

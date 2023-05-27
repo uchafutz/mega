@@ -11,7 +11,7 @@
 
                             <!--// Fancy Title \\-->
                             <div class="sportsmagazine-fancy-title">
-                                <h2>Featured News</h2>
+                                <h2>JOIN MEGA BET"S WINNER TEAM</h2>
                             </div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <div class="sportsmagazine-featured-slider">
@@ -21,7 +21,7 @@
                                     <div class="sportsmagazine-featured-caption">
                                         <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non
                                             nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
+                                      
                                     </div>
                                 </div>
                                 <div class="sportsmagazine-featured-slider-layer">
@@ -30,7 +30,7 @@
                                     <div class="sportsmagazine-featured-caption">
                                         <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non
                                             nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -45,33 +45,19 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('free-bets')}}"><img src="extra-images/latest-blog-3.jpg"
                                                             alt=""></a>
                                                     <figcaption>
-                                                        <span><small>The Team</small></span>
-                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i
+                                                        <span><small>Mega Bet's</small></span>
+                                                        <a href="{{route('free-bets')}}" class="sportsmagazine-link-btn"><i
                                                                 class="fa fa-link"></i></a>
                                                     </figcaption>
                                                 </figure>
                                                 <section>
-                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings
-                                                            us close to the Final</a></h2>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a
-                                                        nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat
-                                                        eros. Pellentesque tempus tortor.</p>
+                                                    <h2><a href="{{route('free-bets')}}">FREE BET'S</a></h2>
+                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit</p>
                                                 </section>
-                                                <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="blog-detail.html"
-                                                        class="sportsmagazine-blog-grid-thumb"><img
-                                                            src="extra-images/blog-thumb-1.jpg" alt=""> Julia Martyn</a>
-                                                    <ul>
-                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a>
-                                                        </li>
-                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                
                                             </li>
                                         </ul>
                                     </div>
@@ -81,33 +67,19 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('today')}}"><img src="extra-images/latest-blog-3.jpg"
                                                             alt=""></a>
                                                     <figcaption>
-                                                        <span><small>The Team</small></span>
-                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i
+                                                        <span><small>Mega Bet's</small></span>
+                                                        <a href="{{route('today')}}" class="sportsmagazine-link-btn"><i
                                                                 class="fa fa-link"></i></a>
                                                     </figcaption>
                                                 </figure>
                                                 <section>
-                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings
-                                                            us close to the Final</a></h2>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a
-                                                        nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat
-                                                        eros. Pellentesque tempus tortor.</p>
+                                                    <h2><a href="{{route('today')}}">TODAY BET'S</a></h2>
+                                                    <p>Login or Register and subscribe for services.</p>
                                                 </section>
-                                                <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="blog-detail.html"
-                                                        class="sportsmagazine-blog-grid-thumb"><img
-                                                            src="extra-images/blog-thumb-1.jpg" alt=""> Julia Martyn</a>
-                                                    <ul>
-                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a>
-                                                        </li>
-                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                               
                                             </li>
                                         </ul>
                                     </div>
@@ -117,33 +89,19 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="blog-detail.html"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('results')}}"><img src="extra-images/latest-blog-3.jpg"
                                                             alt=""></a>
                                                     <figcaption>
-                                                        <span><small>The Team</small></span>
-                                                        <a href="blog-detail.html" class="sportsmagazine-link-btn"><i
+                                                        <span><small>Mega Bets</small></span>
+                                                        <a href="{{route('results')}}" class="sportsmagazine-link-btn"><i
                                                                 class="fa fa-link"></i></a>
                                                     </figcaption>
                                                 </figure>
                                                 <section>
-                                                    <h2><a href="blog-detail.html">The vicotory againts The Shark brings
-                                                            us close to the Final</a></h2>
-                                                    <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a
-                                                        nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat
-                                                        eros. Pellentesque tempus tortor.</p>
+                                                    <h2><a href="{{route('results')}}">OUR RESULTS</a></h2>
+                                                    <p>Review our past results.</p>
                                                 </section>
-                                                <div class="sportsmagazine-blog-grid-options">
-                                                    <a href="blog-detail.html"
-                                                        class="sportsmagazine-blog-grid-thumb"><img
-                                                            src="extra-images/blog-thumb-1.jpg" alt=""> Julia Martyn</a>
-                                                    <ul>
-                                                        <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a>
-                                                        </li>
-                                                        <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                                        <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                               
                                             </li>
                                         </ul>
                                     </div>

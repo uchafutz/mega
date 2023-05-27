@@ -32,6 +32,7 @@
                                         <th>Payment Status</th>
                                         <th>Amount</th>
                                         <th>Description</th>
+                                        <th>Download</th>
                                         
                                     </tr>
 
@@ -42,6 +43,7 @@
                                         <td>{{$myorder->status}}</td>
                                         <td>{{$myorder->amount}}</td>
                                         <td>{{$myorder->description}}</td>
+                                        <td></td>
                                         
                                     </tr>
                                         

@@ -72,8 +72,37 @@ class SubscriptionController extends Controller
                 toastr()->success('Package has been saved successfully!', 'Congrats');
                 return view("paymentpackage", compact("userPackage"));
             }
+        } else if ($userSubscription->status == 1 && $userSubscription->active == "EXPIRED") {
+            if ($package_duration == '7') {
+                $date_from = Carbon::now();
+                $date_to = Carbon::now()->addDays(6);
+                $userPackage = Subscription::create(
+                    [
+                        'user_id' => Auth::user()->id,
+                        'package_id' => $package_id,
+                        'date_from' => $date_from,
+                        'date_to' => $date_to,
+                        'active' => '1'
+                    ]
+                );
+                toastr()->success('Package has been saved successfully!', 'Congrats');
+                return view("paymentpackage", compact("userPackage"));
+            } else {
+                $date_from = Carbon::now();
+                $date_to = Carbon::now()->addDays(29);
+                $userPackage = Subscription::create(
+                    [
+                        'user_id' => Auth::user()->id,
+                        'package_id' => $package_id,
+                        'date_from' => $date_from,
+                        'date_to' => $date_to,
+                        'active' => '1'
+                    ]
+                );
+                toastr()->success('Package has been saved successfully!', 'Congrats');
+                return view("paymentpackage", compact("userPackage"));
+            }
         } else {
-
             $userPackage = $userSubscription;
             return view("paymentpackage", compact("userPackage"));
         }
@@ -101,6 +130,7 @@ class SubscriptionController extends Controller
     public function update(Request $request, Subscription $subscription)
     {
 
+        // edit update user table set ==id  1
         //dd($request->input());
         if ($subscription->active == 1) {
             $data = [
@@ -108,16 +138,22 @@ class SubscriptionController extends Controller
                 "active" => "0"
             ];
             $subscription->update($data);
-            toastr()->success('Subscription has been updated successfully!', 'Congrats');
-            return redirect()->route("subscriptions.index");
+            $val = $subscription->user()->update(['subscription_flag' => '1']);
+            if ($val) {
+                toastr()->success('Subscription has been updated successfully!', 'Congrats');
+                return redirect()->route("subscriptions.index");
+            }
         } else {
             $data = [
                 "status" => "PENDING",
                 "active" => "1"
             ];
             $subscription->update($data);
-            toastr()->success('Subscription has been updated successfully!', 'Congrats');
-            return redirect()->route("subscriptions.index");
+            $val = $subscription->user()->update(['subscription_flag' => '0']);
+            if ($val) {
+                toastr()->success('Subscription has been updated successfully!', 'Congrats');
+                return redirect()->route("subscriptions.index");
+            }
         }
 
         //

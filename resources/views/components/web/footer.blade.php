@@ -105,15 +105,15 @@
 
 
     <!-- jQuery (necessary for JavaScript plugins) -->
-    <script type="text/javascript" src="script/jquery.js"></script>
-    <script type="text/javascript" src="script/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script/slick.slider.min.js"></script>
-    <script type="text/javascript" src="script/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="script/fancybox.pack.js"></script>
-    <script type="text/javascript" src="script/isotope.min.js"></script>
-    <script type="text/javascript" src="script/progressbar.js"></script>
-    <script type="text/javascript" src="script/counter.js"></script>
-    <script type="text/javascript" src="script/functions.js"></script>
+    <script type="text/javascript" src="{{asset('script/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/slick.slider.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/jquery.countdown.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/fancybox.pack.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/isotope.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/progressbar.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/counter.js')}}"></script>
+    <script type="text/javascript" src="{{asset('script/functions.js')}}"></script>
 
 </body>
 

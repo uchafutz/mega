@@ -115,12 +115,14 @@
          <div class="col-md-9">
             <div class="comment-respond sportsmagazine-contact-form">
                 <div class="sportsmagazine-section-heading"><h2>Confirm Your Payement</h2></div>
-                     <form>
+                     <form method="POST" action="{{route('subscriptions.customer',['subscription'=>$userPackage])}}">
+                     
+                        @csrf
                         <ul>
                         <li class="full-input">
                          <label>Comment:</label>
                          <p>
-                        <textarea name="u_msg" placeholder="Type here"></textarea>
+                        <textarea name="description" placeholder="Type here"></textarea>
                         <span><i class="fa fa-comment"></i></span>
                         </p>
                          </li>

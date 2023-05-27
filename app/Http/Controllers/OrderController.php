@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -29,7 +30,35 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "mkeka_id" => "required",
+            "amount" => "required",
+            "user_id" => 'required'
+        ]);
+        $myorder = Order::where(["user_id" => $request->input("user_id"), "mkeka_id" => $request->input("mkeka_id")])->first();
+
+        if (empty($myorder)) {
+            // dd($myorder);
+            //print("upo wapi");
+            $order = Order::create($request->input());
+            toastr()->success('Data has been updated successfully!', 'Congrats');
+            $myorder = $order;
+            return view("todayshow", compact('myorder'));
+        } else if ($myorder->status == "PENDING") {
+            //print("nafika");
+            //dd($myorder);
+            return view("todayshow", compact("myorder"));
+        } else if ($myorder->status == "PAID") {
+
+            $myorders = Order::where(["user_id" => Auth::user()->id])->get();
+            return view("myorders", compact("myorders"));
+        } else {
+            dd($myorder);
+            $order = Order::create($request->input());
+            toastr()->success('Data has been updated successfully!', 'Congrats');
+            $myorder = $order;
+            return view("todayshow", compact('myorder'));
+        }
     }
 
     /**

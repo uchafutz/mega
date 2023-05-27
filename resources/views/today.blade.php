@@ -30,22 +30,28 @@
                                       
                                   
                                  @if (Auth::user()->subscription_flag==1)
+                                       
                                         @foreach ($mkekas as $mkeka )
                              
                                     <li class="col-md-4">
                                        
                                              <figure>
-                                            <a href="player-detail.html"><img src="extra-images/team-grid-img1.jpg" alt=""></a>
+                                            <a href="#"><img src="extra-images/team-grid-img1.jpg" alt=""></a>
                                             <figcaption>
                                                 <div class="sportsmagazine-classic-player-info">
-                                                    <h4><a href="player-detail.html">{{$mkeka->total_olds}}</a></h4>
+                                                    <h4><a href="#">{{$mkeka->total_olds}}</a></h4>
                                                     <span>Olds</span>
                                                     <ul class="classic-player-option">
                                                         {{-- <li><i class="fa fa-calendar-o"></i><time datetime="2008-02-14 20:00">{{$mkeka->create_at?->format('d/m/Y')}}</time></li> --}}
                                                         <li><i class="fa fa-futbol-o"></i> <span>{{$mkeka->price}}</span></li>
                                                     </ul>
-                                                    
-                                                    <a href="player-detail.html" class="classic-redmore-btn">BUY NOW</a>
+                                                    <form method="POST" action="{{route('orders.store')}}">
+                                                    @csrf
+                                                    <input type="hidden" name="mkeka_id" value="{{$mkeka->id}}"/>
+                                                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
+                                                    <input type="hidden" name="amount" value="{{$mkeka->price}}"/>
+                                                    <button type="submit" class="classic-redmore-btn"><span style="color:red">BUY NOW</span></button>
+                                                    </form>
                                                 </div>
                                                 <div class="sportsmagazine-classic-player-text">
                                                     @if ($mkeka->type=="premier")

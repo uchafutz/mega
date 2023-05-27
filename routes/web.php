@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Inv\OrderCustomerController;
+use App\Http\Controllers\Inv\SubscriptCustomerController;
 use App\Http\Controllers\MkekaController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PackageController;
@@ -40,4 +42,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource("subscriptions", SubscriptionController::class);
     Route::resource("mkekas", MkekaController::class);
     Route::resource("orders", OrderController::class);
+    Route::post("/subscriptions/customer/{subscription}", SubscriptCustomerController::class)->name('subscriptions.customer');
+    Route::post("/orders/customer/{order}", OrderCustomerController::class)->name("orders.customer");
 });
