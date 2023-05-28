@@ -82,6 +82,9 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
+        $order->update($request->input());
+        toastr()->success('Data has been updated successfully!', 'Congrats');
+        return redirect()->route("orders.index");
         //
     }
 
@@ -90,6 +93,8 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        toastr()->error('Data has been delete successfully!', 'Congrats');
+        return redirect()->route("orders.index");
     }
 }

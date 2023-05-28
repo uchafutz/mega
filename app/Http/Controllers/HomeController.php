@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mkeka\Mkeka;
+use App\Models\Order\Order;
 use App\Models\Package\Package;
 use App\Models\Subsription\Subscription;
 use Carbon\Carbon;
@@ -30,13 +31,17 @@ class HomeController extends Controller
     public function index()
     {
         $packages = Package::all();
+        $packagecount = Package::count();
+        $mkekacount = Mkeka::count();
+        $ordercount = Order::count();
+        $subcount = Subscription::count();
         $user = Auth::user();
         $mkekas = Mkeka::where("type", "!=", "results")->paginate();
         if ($user->status == 1) {
-            return view("home");
+            return view("home", compact("packagecount", "mkekacount", "ordercount", "subcount"));
         } else {
-            $userPackage = Subscription::where('user_id', "=", $user->id)->first();
-            //  dd($userPackage);
+            $userPackage = Subscription::where(["user_id" => $user->id])->where("status", "!=", "EXPIRED")->first();
+            //dd($userPackage);
             if ($user->subscription_flag == 0 && empty($userPackage->status)) {
                 return view("today", compact("packages", "mkekas"));
             } elseif ($user->subscription_flag == 0 && $userPackage->active == 1) {

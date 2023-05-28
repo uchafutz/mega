@@ -12,11 +12,52 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                  <a href="{{route('packages.index')}}">Packages</a>
-                  <a href="{{route('subscriptions.index')}}">Subscription</a>
-                  <a href="{{route('mkekas.index')}}">mkeka</a>
-                  <a href="{{route('orders.index')}}">Orders</a>
+                  <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Packages {{ $packagecount}}
+                            </div>
+                            <div class="card-body">
+                             <a href="{{route('packages.index')}}">Packages</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Subscriptions {{$subcount}}
+                            </div>
+                            <div class="card-body">
+                                 <a href="{{route('subscriptions.index')}}">Subscription</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Mkeka  {{$mkekacount}}
+                            </div>
+                            <div class="card-body">
+                                 <a href="{{route('mkekas.index')}}">mkeka</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Orders {{$ordercount}}
+                            </div>
+                            <div class="card-body">
+                                 <a href="{{route('orders.index')}}">Orders</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                 
+                 
+                 
+                 
                 </div>
             </div>
         </div>

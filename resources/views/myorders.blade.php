@@ -43,7 +43,10 @@
                                         <td>{{$myorder->status}}</td>
                                         <td>{{$myorder->amount}}</td>
                                         <td>{{$myorder->description}}</td>
-                                        <td></td>
+                                        @if ($myorder->status == "PAID")
+                                           <td><a href="{{$myorder->mkeka->featureImage}}">Click to Download</a></td> 
+                                        @endif
+                                        
                                         
                                     </tr>
                                         

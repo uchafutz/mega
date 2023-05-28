@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\Utility;
 use App\Models\Mkeka\Mkeka;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -82,10 +83,16 @@ class MkekaController extends Controller
      */
     public function update(Request $request, Mkeka $mkeka)
     {
-        dd($request->input());
-        $featureImage = $request->file('featureImage')->store('featureImage', 'public');
-        $mkeka->update(["featureImage" => $featureImage]);
+        // dd($request->input());
+        $mkeka->fill($request->input());
+        if (request()->hasFile("featureImage")) {
+            $mkeka->featureImage = Utility::uploadFile("featureImage");
+        }
+        $mkeka->update();
+        // $featureImage = $request->file('featureImage')->store('featureImage', 'public');
+        // $mkeka->update(["featureImage" => $featureImage]);
         toastr()->success('Data has been stored successfully!', 'Congrats');
+        return redirect()->route('mkekas.index');
         //
     }
 
@@ -94,6 +101,8 @@ class MkekaController extends Controller
      */
     public function destroy(Mkeka $mkeka)
     {
-        //
+        $mkeka->delete();
+        toastr()->error("Data delete succeful");
+        return redirect()->route('mkekas.index');
     }
 }

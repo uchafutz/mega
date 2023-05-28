@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <aside class="col-md-6 sportsmagazine-copyright-left">
-                            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+                            <p><a target="_blank" href="#">Mega Bet's</a></p>
                         </aside>
                         <aside class="col-md-6 sportsmagazine-copyright-right">
                             <ul class="sportsmagazine-copyright-link">
@@ -36,7 +36,7 @@
                 <h4>Login To Your Account</h4>
                    @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
                 <form method="POST" action="{{ route('login') }}">

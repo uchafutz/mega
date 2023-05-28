@@ -31,19 +31,21 @@
                                                 <th>Old</th>
                                                 <th>Price</th>
                                                 <th>Type</th>
-                                               
+                                                <th>Premier</th>
                                                 <th>Action</th>
                                             </thead>
                                             <tbody>
                                                 @foreach ($mkekas as $mkeka)
                                                     <tr>
                                                         <td> {{ __('NO:000-') }}{{ $mkeka->id }}</td>
-                                                        <td> <img class="card-img-top" src={{ $mkeka->picture }} height="40px"
-                                                                width="80px" alt="Card image"></td>
+                                                        <td> <img  src={{ $mkeka->picture }} height="40px"
+                                                                width="80px" ></td>
                                                         <td> {{ $mkeka->description }}</td>
                                                         <td>{{ $mkeka->total_olds }}</td>
                                                         <td>{{ $mkeka->price }}</td>
                                                         <td> {{ $mkeka->type }}</td>
+                                                        <th><img  src={{ $mkeka->featureImage }} height="40px"
+                                                                width="80px" ></th>
                                                       
                                                         <td>
                                                             <div class="row">

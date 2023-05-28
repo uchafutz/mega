@@ -57,15 +57,20 @@
                                             </div>
 
                                         </div>
-                                        <div class="col">
+                                       
+                                    </div>
+                                    
+                                     
+                                </div>
+                                <div class="row">
+                                     <div class="col">
                                              <form method="POST"
-                                            action="{{ route('mkekas.update', ['mkeka' => $mkeka]) }}">
-                                            @method('PUT')
+                                            action="{{ route('mkekas.update', ['mkeka' => $mkeka]) }}" enctype="multipart/form-data">
+                                            @method('patch')
                                             @csrf
                                              @if ($mkeka->type=="premier")
                                              <div class="row mb-3">
-                                    <label for="name"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('Upload Mkeka---Real') }}</label>
+                                    <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Upload Mkeka---Real') }}</label>
 
                                     <div class="col-md-6">
                                         <input name="featureImage"
@@ -88,9 +93,6 @@
                                             </div>
                                         </form>
                                         </div>
-                                    </div>
-                                    
-                                     
                                 </div>
                             </div>
                         </div>
