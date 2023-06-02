@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="col-sm-12">
+            <div class="col-sm-8">
 
 
                <div class="card">
@@ -25,7 +25,7 @@
                                 <th>Package</th>
                                 <th>Customer</th>
                                 <th>Description</th>
-                                <th>Action</th>
+                                <th></th>
 
                             </tr>
                         </thead>

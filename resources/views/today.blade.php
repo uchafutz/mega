@@ -36,7 +36,7 @@
                                     <li class="col-md-4">
                                        
                                              <figure>
-                                            <a href="#"><img src="extra-images/team-grid-img1.jpg" alt=""></a>
+                                            <a href="#"><img src="{{$mkeka->picture}}" alt=""></a>
                                             <figcaption>
                                                 <div class="sportsmagazine-classic-player-info">
                                                     <h4><a href="#">{{$mkeka->total_olds}}</a></h4>
@@ -45,6 +45,7 @@
                                                         {{-- <li><i class="fa fa-calendar-o"></i><time datetime="2008-02-14 20:00">{{$mkeka->create_at?->format('d/m/Y')}}</time></li> --}}
                                                         <li><i class="fa fa-futbol-o"></i> <span>{{$mkeka->price}}</span></li>
                                                     </ul>
+                                                      @if ($mkeka->type=="premier")
                                                     <form method="POST" action="{{route('orders.store')}}">
                                                     @csrf
                                                     <input type="hidden" name="mkeka_id" value="{{$mkeka->id}}"/>
@@ -52,14 +53,17 @@
                                                     <input type="hidden" name="amount" value="{{$mkeka->price}}"/>
                                                     <button type="submit" class="classic-redmore-btn"><span style="color:red">BUY NOW</span></button>
                                                     </form>
-                                                </div>
-                                                <div class="sportsmagazine-classic-player-text">
-                                                    @if ($mkeka->type=="premier")
-                                                       <h4><a href="{{route("todayshow")}}">{{ $mkeka->price}}TSH</a></h4>  
                                                     @endif
-                                                   
+                                                </div>
+                                                  @if ($mkeka->type=="premier")
+                                                <div class="sportsmagazine-classic-player-text">
+                                                  
+                                                       <h4><a href="{{route("todayshow")}}">{{ $mkeka->price}}TSH</a></h4>  
+                                                  
+        
                                                     <span>Olds <b>{{$mkeka->total_olds}}</b></span>
                                                 </div>
+                                                  @endif
                                             </figcaption>
                                         </figure>
                                     </li>

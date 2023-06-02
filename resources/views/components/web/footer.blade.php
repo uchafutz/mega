@@ -44,20 +44,15 @@
                     <input type="text" value="Enter username*" name="email"
                         onblur="if(this.value == '') { this.value ='Enter username*'; }"
                         onfocus="if(this.value =='Enter username*') { this.value = ''; }">
-                    <input type="password"  value="Password*" name="password" onblur="if(this.value == '') { this.value ='Password*'; }"
-                        onfocus="if(this.value =='Password*') { this.value = ''; }">
+                    <input type="password"  value="" name="password" onblur="if(this.value == '') { this.value =''; }"
+                        onfocus="if(this.value =='') { this.value = ''; }">
                     <a href="#" class="sportsmagazine-colorhover">Forget Password?</a>
                     <div class="clearfix"></div>
                     <label><input type="submit" value="Sign In"
                             class="sportsmagazine-bordercolor sportsmagazine-color"></label>
                 </form>
-                <h4>Try Our Socials Also</h4>
-                <ul class="login-network">
-                    <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-                    <li class="sportsmagazine-twitter"><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-                    <li class="sportsmagazine-google-plus"><a href="#"><i class="fa fa-google-plus-square"></i>
-                            Google+</a></li>
-                </ul>
+              
+              
                 <p>Not A Member Yet ? <a href="#" class="sportsmagazine-color">Sign - Up Now !</a></p>
             </div>
             <div class="clearfix"></div>
@@ -79,10 +74,10 @@
                     <input type="text" name="email" value="Enter Email*"
                         onblur="if(this.value == '') { this.value ='Enter Email*'; }"
                         onfocus="if(this.value =='Enter Email*') { this.value = ''; }">
-                    <input type="password" name="password" value="Type your password*"
+                    <input type="password" name="password" value=""
                         onblur="if(this.value == '') { this.value ='Type your password*'; }"
                         onfocus="if(this.value =='Type your password*') { this.value = ''; }">
-                    <input type="password" name="password_confirmation" value="Confirm your password*"
+                    <input type="password" name="password_confirmation" value=""
                         onblur="if(this.value == '') { this.value ='Confirm your password*'; }"
                         onfocus="if(this.value =='Confirm your password*') { this.value = ''; }">
                     <a href="#" class="sportsmagazine-colorhover">Forget Password?</a>
@@ -90,13 +85,8 @@
                     <label><input type="submit" value="Sign Up"
                             class="sportsmagazine-bordercolor sportsmagazine-color"></label>
                 </form>
-                <h4>Try Our Socials Also</h4>
-                <ul class="login-network">
-                    <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-                    <li class="sportsmagazine-twitter"><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-                    <li class="sportsmagazine-google-plus"><a href="#"><i class="fa fa-google-plus-square"></i>
-                            Google+</a></li>
-                </ul>
+               
+               
                 <p>Not A Member Yet ? <a href="#" class="sportsmagazine-color">Login - Now !</a></p>
             </div>
             <div class="clearfix"></div>

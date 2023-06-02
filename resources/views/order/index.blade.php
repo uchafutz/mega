@@ -21,7 +21,7 @@
                                     <th>Amount</th>
                                     <th>Description</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th></th>
 
                                 </tr>
                             </thead>

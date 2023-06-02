@@ -11,27 +11,19 @@
 
                             <!--// Fancy Title \\-->
                             <div class="sportsmagazine-fancy-title">
-                                <h2>JOIN MEGA BET"S WINNER TEAM</h2>
+                                <center><h2>JOIN MEGA BET"S WINNER TEAM</h2></center>
                             </div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <div class="sportsmagazine-featured-slider">
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="extra-images/featured-slider-1.jpg" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
-                                    <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non
-                                            nunc</h2>
-                                      
-                                    </div>
+                                  
                                 </div>
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="extra-images/featured-slider-2.jpg" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
-                                    <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non
-                                            nunc</h2>
-                                        
-                                    </div>
+                                 
                                 </div>
                             </div>
                             <!--// Featured Slider \\-->

@@ -9,10 +9,7 @@
                         
                         <div class="d-flex flex-row-reverse">
                             <div class=" px-2">
-                              
                                     <a href="{{ route('mkekas.create') }}" class="btn btn-success">Add Mkeka</a>
-                         
-
                             </div>
 
                         </div>
@@ -27,24 +24,22 @@
                                             <thead>
                                                 <th> No:</th>
                                                 <th>Image</th>
-                                                <th>Description</th>
-                                                <th>Old</th>
+                                                <th>Olds</th>
                                                 <th>Price</th>
                                                 <th>Type</th>
                                                 <th>Premier</th>
-                                                <th>Action</th>
+                                                <th></th>
                                             </thead>
                                             <tbody>
                                                 @foreach ($mkekas as $mkeka)
                                                     <tr>
                                                         <td> {{ __('NO:000-') }}{{ $mkeka->id }}</td>
-                                                        <td> <img  src={{ $mkeka->picture }} height="40px"
-                                                                width="80px" ></td>
-                                                        <td> {{ $mkeka->description }}</td>
+                                                        <td><img src="storage/{{ $mkeka->picture }}" class="img-fluid rounded-start"
+                                                        alt="..." width="90px" height="40px"> </td>
                                                         <td>{{ $mkeka->total_olds }}</td>
                                                         <td>{{ $mkeka->price }}</td>
                                                         <td> {{ $mkeka->type }}</td>
-                                                        <th><img  src={{ $mkeka->featureImage }} height="40px"
+                                                        <th><img  src="storage/{{ $mkeka->featureImage }}" height="40px"
                                                                 width="80px" ></th>
                                                       
                                                         <td>
