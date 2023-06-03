@@ -24,8 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get("/today", function () {
-    return view("today");
+Route::get("/login", function () {
+    return view("auth.login");
+});
+Route::get("/register", function () {
+    return view("auth.register");
 });
 
 Route::get('/', [\App\Http\Controllers\Web\WebController::class, 'index'])->name("welcome");

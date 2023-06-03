@@ -50,10 +50,12 @@
                                     @csrf
                                    </form>
                                  @else
-                                <li><i class="fa fa-user"></i> <a href="#" data-toggle="modal"
-                                        data-target="#loginModal">Login</a></li>
-                                <li><i class="fa fa-sign-in"></i> <a href="#" data-toggle="modal"
-                                        data-target="#signupModal">Sign Up</a></li>
+                                {{-- <li><i class="fa fa-user"></i> <a href="#" data-toggle="modal"
+                                        data-target="#loginModal">Login</a></li> --}}
+                                <li><i class="fa fa-user"></i> <a href="{{url('/login')}}" >Login</a></li>
+                                {{-- <li><i class="fa fa-sign-in"></i> <a href="#" data-toggle="modal"
+                                        data-target="#signupModal">Sign Up</a></li> --}}
+                                 <li><i class="fa fa-sign-in"></i> <a href="{{url('/register')}}" >Sign Up</a></li>
                                 @endauth
 
                                 @endif
@@ -114,3 +116,4 @@
             <!--// MainSection \\-->
 
         </header>
+       
