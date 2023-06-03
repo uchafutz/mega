@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserSubriscription;
 use App\Models\Subsription\Subscription;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -56,6 +57,7 @@ class SubscriptionController extends Controller
                     ]
                 );
                 toastr()->success('Package has been saved successfully!', 'Congrats');
+                event(new UserSubriscription(Auth::user()->email, 'Subscription for Weekly Package'));
                 return view("paymentpackage", compact("userPackage"));
             } else {
                 $date_from = Carbon::now();
@@ -70,6 +72,7 @@ class SubscriptionController extends Controller
                     ]
                 );
                 toastr()->success('Package has been saved successfully!', 'Congrats');
+                event(new UserSubriscription(Auth::user()->email, 'Subscription for Monthly Package'));
                 return view("paymentpackage", compact("userPackage"));
             }
         } else if ($userSubscription->status == 1 && $userSubscription->active == "EXPIRED") {
@@ -86,6 +89,7 @@ class SubscriptionController extends Controller
                     ]
                 );
                 toastr()->success('Package has been saved successfully!', 'Congrats');
+                event(new UserSubriscription(Auth::user()->email, 'Subscription for Weekly Package'));
                 return view("paymentpackage", compact("userPackage"));
             } else {
                 $date_from = Carbon::now();
@@ -100,6 +104,7 @@ class SubscriptionController extends Controller
                     ]
                 );
                 toastr()->success('Package has been saved successfully!', 'Congrats');
+                event(new UserSubriscription(Auth::user()->email, 'Subscription for Weekly Package'));
                 return view("paymentpackage", compact("userPackage"));
             }
         } else {
@@ -137,10 +142,13 @@ class SubscriptionController extends Controller
                 "status" => "PAID",
                 "active" => "0"
             ];
+            // dd($subscription->user->email);
             $subscription->update($data);
+
             $val = $subscription->user()->update(['subscription_flag' => '1']);
             if ($val) {
                 toastr()->success('Subscription has been updated successfully!', 'Congrats');
+                event(new UserSubriscription($subscription->user->email, 'Your Payment confirmed'));
                 return redirect()->route("subscriptions.index");
             }
         } else {

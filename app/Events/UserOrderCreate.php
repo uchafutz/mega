@@ -10,20 +10,19 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class UserSubriscription
+class UserOrderCreate
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $email;
-    public $body;
 
     /**
      * Create a new event instance.
      */
-    public function __construct($email, $body)
+    public function __construct($email)
     {
         $this->email = $email;
-        $this->body = $body;
+        //
     }
 
     /**

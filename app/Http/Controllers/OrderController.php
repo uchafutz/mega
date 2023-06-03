@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserOrderCreate;
+use App\Events\UserSubriscription;
 use App\Models\Order\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,12 +39,14 @@ class OrderController extends Controller
             "user_id" => 'required'
         ]);
         $myorder = Order::where(["user_id" => $request->input("user_id"), "mkeka_id" => $request->input("mkeka_id")])->first();
-
+        $email = User::where(["user_id" => $request->input("user_id")])->first();
         if (empty($myorder)) {
             // dd($myorder);
             //print("upo wapi");
             $order = Order::create($request->input());
+            event(new UserOrderCreate($email));
             toastr()->success('Data has been updated successfully!', 'Congrats');
+
             $myorder = $order;
             return view("todayshow", compact('myorder'));
         } else if ($myorder->status == "PENDING") {
@@ -84,6 +89,7 @@ class OrderController extends Controller
     {
         $order->update($request->input());
         toastr()->success('Data has been updated successfully!', 'Congrats');
+        event(new UserSubriscription($order->user->email, 'Order payment confirm'));
         return redirect()->route("orders.index");
         //
     }

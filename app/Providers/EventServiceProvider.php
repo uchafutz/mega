@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Events\UserSubriscription;
+use App\Listeners\UserOrderListener;
+use App\Listeners\UserPaymentListener;
 use App\Listeners\UserSubscriptionnew;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -22,6 +24,10 @@ class EventServiceProvider extends ServiceProvider
         ],
         UserSubriscription::class => [
             UserSubscriptionnew::class,
+            UserPaymentListener::class,
+        ],
+        UserOrderCreate::class => [
+            UserOrderListener::class,
         ]
 
     ];
