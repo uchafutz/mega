@@ -8,6 +8,7 @@
                     <div class="card-header">
                         <div class="d-flex flex-row-reverse">
                         </div>
+                        Order list
 
                     </div>
                     <div class="card-body">
@@ -37,7 +38,7 @@
                                         <td>{{ $order->description }}</td>
                                         <td>{{ $order->status }}</td>
                                         <td>
-                                          <div class="row d-flex ">
+                                          <div class="btn-group" role="group" aria-label="Basic example">
 
                                                     <div class="col"> 
                                                         <form method="POST" action="{{route('orders.update',['order'=>$order])}}" style="display: inline">
@@ -62,7 +63,7 @@
                                                             
                                                         
                                                     
-                                                </div>
+                                         </div>
 
                                         </td>
                                     </tr>

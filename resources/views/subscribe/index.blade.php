@@ -41,15 +41,15 @@
                                     <td> {{ $subscription->user->name ?? null }}</td>
                                     <td>{{ $subscription->description }}</td>
                                     <td>
-                                      <div style="display: flex">
+                                     <div class="btn-group" role="group" aria-label="Basic example">
 
                                             <form method="POST" action="{{route('subscriptions.update',['subscription'=>$subscription])}}" style="display: :inline">
                                                 @method('PATCH')
                                                 @csrf
                                            @if ($subscription->active==0)
-                                               <button class="btn btn-outline-primary">In Active</button>
+                                               <button class="btn btn-outline-primary">disable</button>
                                             @else
-                                                <button class="btn btn-outline-success">Set Active</button>
+                                                <button class="btn btn-outline-success">able</button>
                                            @endif
                                            
                                      

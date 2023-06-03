@@ -39,7 +39,7 @@ class OrderController extends Controller
             "user_id" => 'required'
         ]);
         $myorder = Order::where(["user_id" => $request->input("user_id"), "mkeka_id" => $request->input("mkeka_id")])->first();
-        $email = User::where(["user_id" => $request->input("user_id")])->first();
+        $email = User::where(["id" => $request->input("user_id")])->first();
         if (empty($myorder)) {
             // dd($myorder);
             //print("upo wapi");

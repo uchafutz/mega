@@ -30,7 +30,7 @@
                                     @foreach ($mkekas as $mkeka)
                                     <li>
                                         <figure>
-                                            <a data-fancybox-group="group" href="{{$mkeka->picture}}" class="fancybox"><img src="{{$mkeka->picture}}" height="700px" alt=""><i class="icon-signs23"></i></a>
+                                            <a data-fancybox-group="group" href="storage/{{$mkeka->picture}}" class="fancybox"><img src="{{$mkeka->picture}}" height="700px" alt=""><i class="icon-signs23"></i></a>
                                           
                                         </figure>
                                     </li>

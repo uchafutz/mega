@@ -43,7 +43,7 @@
                                                                 width="80px" ></th>
                                                       
                                                         <td>
-                                                            <div class="row">
+                                                            <div class="btn-group" role="group" aria-label="Basic example">
                                                                 <div class="col">
                                                                    
                                                                 <a href="{{ route('mkekas.edit', ['mkeka' => $mkeka->id]) }}"
@@ -53,6 +53,8 @@
                                                                 <div class="col">
                                                                 <form method="POST" action="{{route('mkekas.destroy', $mkeka->id)}}" style="display: inli
                                                                     ">
+                                                                    @csrf
+                                                                    @method("DELETE")
                                                                     <button class='btn btn-outline-danger'>Delete</button>
 
                                                                     </form>

@@ -43,7 +43,8 @@ class WebController extends Controller
     public function results()
     {
 
-        $mkekas = Mkeka::where("type", "==", "results")->paginate();
+        $mkekas = Mkeka::where(["type" => "results"])->paginate();
+        //dd($mkekas);
         return view("result", compact("mkekas"));
     }
 }
