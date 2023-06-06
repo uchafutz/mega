@@ -65,7 +65,16 @@
                             </div>
                         </div>
                     </form>
+                    <br/>
+                    <div class="row mb-0">
+                        <div class="d-flex justify-content-center">
+                                  <a href="https://wa.link/c56hdz" class="btn btn-success mr-5 text-dark px-5">Chat Whatsapp</a>
+                     <a href="http://t.me//MrNelson99" class="btn btn-warning px-5">Chat Telegram</a>
+                        </div>
+
+                    </div>
                 </div>
+             
             </div>
         </div>
     </div>

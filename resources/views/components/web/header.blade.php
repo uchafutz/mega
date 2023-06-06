@@ -28,15 +28,16 @@
                 <div class="container">
                     <div class="row">
                         <aside class="col-md-4">
-                            <ul class="sportsmagazine-social-network">
+                            {{-- <ul class="sportsmagazine-social-network">
                                 <li><a href="#" class="sportsmagazine-colorhover fa fa-facebook-official"></a></li>
                                 <li><a href="#" class="sportsmagazine-colorhover fa fa-twitter-square"></a></li>
                                 <li><a href="#" class="sportsmagazine-colorhover fa fa-linkedin-square"></a></li>
                                 <li><a href="#" class="sportsmagazine-colorhover fa fa-google-plus-square"></a></li>
-                            </ul>
+                            </ul> --}}
                         </aside>
                         <aside class="col-md-8">
                             <ul class="sportsmagazine-user-section">
+                                <li> <i class="fa fa-comment"></i>  <a href="https://wa.link/c56hdz" >Chat with us</a></li>
                                 @if (Route::has('login'))
                                  @auth
                                    <li><i class="fa fa-shopping-cart"></i> <a href="{{route('myorders')}}" class="sportsmagazine-open-cart">Cart (0)</a>
@@ -105,8 +106,7 @@
                                             </li> --}}
 
                                             <li>
-                                                  <a href="https://wa.me/255745256729" >Chat with us <i
-                                                                class="fa fa-comment"></i></a>
+                                                 
                                             </li>
 
                                         </ul>

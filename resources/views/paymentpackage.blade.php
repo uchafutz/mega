@@ -42,7 +42,7 @@
   <div class="container">
 	<div class="row">
         <div class="sportsmagazine-fancy-title">
-        <h2>MPESA LIPA NO 18299 Please Confrim Your Payment</h2>
+        <h2>TIGO PESA NO 0710269170  NELSON MWASENGA Please Confrim Your Payment</h2>
      </div> 
          <div class="row container my-3">
                 <div class="col-sm-3">
@@ -139,7 +139,8 @@
                   
       </div>
     </div>
-    
+     <a href="https://wa.link/c56hdz" class="btn btn-success mr-5 text-dark px-5">Chat Whatsapp</a>
+    <a href="http://t.me//MrNelson99" class="btn btn-warning px-5">Chat Telegram</a>
 </div>
 
 </div>

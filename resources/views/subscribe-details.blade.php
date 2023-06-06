@@ -10,7 +10,7 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8 mt-5">
                     <div class="d-flex justify-content-start">
-                        <h1 class="fs-1 fw-bold">Pay for your Subscription Package</h1>
+                        <h1 class="fs-1 fw-bold">  <b>TIGO PESA NO 0710269170  NELSON MWASENGA </b> Pay for your Subscription Package</h1>
 
                     </div>
                     <div class="d-flex justify-content-center my-3">
@@ -150,8 +150,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-3">
-                <button type="button" class="btn btn-success mr-5 text-dark px-5">Chat</button>
-                <button type="button" class="btn btn-warning px-5">Help</button>
+                <a href="https://wa.link/c56hdz" class="btn btn-success mr-5 text-dark px-5">Chat Whatsapp</a>
+                <a href="http://t.me//MrNelson99" class="btn btn-warning px-5">Chat Telegram</a>
             </div>
         </div>
 

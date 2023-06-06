@@ -10,8 +10,8 @@
                         </aside>
                         <aside class="col-md-6 sportsmagazine-copyright-right">
                             <ul class="sportsmagazine-copyright-link">
-                                <li><a href="404.html" class="sportsmagazine-colorhover">Terms And Condition</a></li>
-                                <li><a href="404.html" class="sportsmagazine-colorhover">Privacy Policy</a></li>
+                                <li><a href="{{ asset('policy.pdf')}}" class="sportsmagazine-colorhover">Terms And Condition</a></li>
+                                <li><a href="{{ asset('policy.pdf')}}" class="sportsmagazine-colorhover">Privacy Policy</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -89,7 +89,10 @@
                
                 <p>Not A Member Yet ? <a href="#" class="sportsmagazine-color">Login - Now !</a></p>
             </div>
-            <div class="clearfix"></div>
+            <div class="clearfix">
+                   <a href="https://wa.link/c56hdz" class="btn btn-success mr-5 text-dark px-5">Chat Whatsapp</button>
+    <a href="http://t.me//MrNelson99" class="btn btn-warning px-5">Chat Telegram</button>
+            </div>
         </div>
     </div>
 
