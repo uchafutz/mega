@@ -68,7 +68,7 @@
             <div class="sportsmagazine-main-header">
                 <div class="container">
                     <div class="row">
-                        <aside class="col-md-2"><a href="index-2.html" class="sportsmagazine-logo"><img
+                        <aside class="col-md-2"><a href="{{url('/')}}" class="sportsmagazine-logo"><img
                                     src="images/logo-1.png" alt=""></a></aside>
                         <div class="col-md-10">
                             <div class="sportsmagazine-right-section">

@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('welcome') }}">
                  <aside class="col-md-2"><a href="{{ route('welcome') }}" class="sportsmagazine-logo"><img
@@ -56,7 +56,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background-image: url('images/banner.png');">
             @yield('content')
         </main>
     </div>
