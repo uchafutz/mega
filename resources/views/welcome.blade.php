@@ -16,12 +16,12 @@
                             <!--// Featured Slider \\-->
                             <div class="sportsmagazine-featured-slider">
                                 <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="extra-images/featured-slider-1.jpg" alt="">
+                                    <img src="images/home2.png" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
                                   
                                 </div>
                                 <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="extra-images/featured-slider-2.jpg" alt="">
+                                    <img src="images/home2.png" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
                                  
                                 </div>
@@ -37,7 +37,7 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="{{route('free-bets')}}"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('free-bets')}}"><img src="images/topbet.jpg"
                                                             alt=""></a>
                                                     <figcaption>
                                                         <span><small>Mega Bet's</small></span>
@@ -59,7 +59,7 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="{{route('today')}}"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('today')}}"><img src="images/topbet.jpg"
                                                             alt=""></a>
                                                     <figcaption>
                                                         <span><small>Mega Bet's</small></span>
@@ -81,7 +81,7 @@
                                         <ul class="row">
                                             <li class="col-md-12 sportsmagazine-the-team">
                                                 <figure>
-                                                    <a href="{{route('results')}}"><img src="extra-images/latest-blog-3.jpg"
+                                                    <a href="{{route('results')}}"><img src="images/topbet.jpg"
                                                             alt=""></a>
                                                     <figcaption>
                                                         <span><small>Mega Bets</small></span>

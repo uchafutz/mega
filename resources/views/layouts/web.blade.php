@@ -22,7 +22,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('welcome') }}">
-                    {{ __('Mega Bet') }}
+                 <aside class="col-md-2"><a href="{{ route('welcome') }}" class="sportsmagazine-logo"><img
+                                    src="images/logo-1.png" alt=""></a></aside>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

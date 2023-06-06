@@ -104,6 +104,11 @@
 
                                             </li> --}}
 
+                                            <li>
+                                                  <a href="https://wa.me/255745256729" >Chat with us <i
+                                                                class="fa fa-comment"></i></a>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </nav>
