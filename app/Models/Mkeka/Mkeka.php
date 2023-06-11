@@ -15,12 +15,12 @@ class Mkeka extends Model
     protected $fillable = ["picture", "description", "total_olds", "price", "expires_at", "was_succeful", "type", "featureImage"];
 
     protected $dates = ['create_at'];
-    protected function picture(): Attribute
-    {
-        return Attribute::make(fn ($val) => Storage::url($val));
-    }
-    protected function featureImage(): Attribute
-    {
-        return Attribute::make(fn ($val) => Storage::url($val));
-    }
+    // protected function picture(): Attribute
+    // {
+    //     return Attribute::make(fn ($val) => Storage::url($val));
+    // }
+    // protected function featureImage(): Attribute
+    // {
+    //     return Attribute::make(fn ($val) => Storage::url($val));
+    // }
 }

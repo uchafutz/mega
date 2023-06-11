@@ -9,7 +9,7 @@
                         
                         <div class="col-md-12">
                             <div class="sportsmagazine-player-thumb-wrap">
-                                <figure><img src="{{$myorder->mkeka->picture}}" alt=""></figure>
+                                <figure><img src="uploads/{{$myorder->mkeka->picture}}" alt=""></figure>
                                 <div class="sportsmagazine-player-thumb-text">
                                     <h2>{{$myorder->amount}} TSH</h2>
                                     <h3>Olds<br><span> {{$myorder->mkeka->total_olds}}</span></h3>

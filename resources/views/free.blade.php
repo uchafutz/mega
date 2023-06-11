@@ -29,7 +29,7 @@
                                     @foreach ($mkekas as $mkeka)
                                     <li class="col-md-4">
                                         <figure>
-                                            <a ><img src="{{$mkeka->picture}}" height="600" alt=""></a>
+                                            <a ><img src="uploads/{{$mkeka->picture}}" height="600" alt=""></a>
                                             
                                         </figure>
                                     </li>

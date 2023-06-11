@@ -6,6 +6,7 @@ use App\Http\Helpers\Utility;
 use App\Models\Mkeka\Mkeka;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class MkekaController extends Controller
 {
@@ -14,7 +15,7 @@ class MkekaController extends Controller
      */
     public function index()
     {
-        $mkekas = DB::table('mkekas')->orderBy('created_at', 'desc')->paginate();
+        $mkekas = DB::table('mkekas')->orderBy('created_at', 'desc')->paginate(10);
         return view("mkeka.index", compact('mkekas'));
     }
 
@@ -35,14 +36,13 @@ class MkekaController extends Controller
             [
 
                 'picture' => 'required|mimes:jpg,png,jpeg,gif,svg|max:2048',
-                'total_olds' => ['required'],
-                'expires_at' => ['required'],
                 'type' => ['required'],
 
             ]
 
         );
-        $picture = $request->file('picture')->store('picture', 'public');
+        $picture = Str::random(40) . '.' . $request->file('picture')->getClientOriginalExtension();
+        $request->file('picture')->move(public_path('uploads'), $picture);
         Mkeka::create(
             [
 
@@ -86,9 +86,10 @@ class MkekaController extends Controller
         // dd($request->input());
         $mkeka->fill($request->input());
         if (request()->hasFile("featureImage")) {
-            $mkeka->featureImage = Utility::uploadFile("featureImage");
+            $featureImage = Str::random(40) . '.' . $request->file('featureImage')->getClientOriginalExtension();
+            $request->file('featureImage')->move(public_path('uploads'), $featureImage);
         }
-        $mkeka->update();
+        $mkeka->update(['featureImage' => $featureImage]);
         // $featureImage = $request->file('featureImage')->store('featureImage', 'public');
         // $mkeka->update(["featureImage" => $featureImage]);
         toastr()->success('Data has been stored successfully!', 'Congrats');

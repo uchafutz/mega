@@ -36,7 +36,7 @@
                                     <li class="col-md-4">
                                        
                                              <figure>
-                                            <a href="#"><img src="{{$mkeka->picture}}" alt=""></a>
+                                            <a href="#"><img src="uploads/{{$mkeka->picture}}" alt=""></a>
                                             <figcaption>
                                                 <div class="sportsmagazine-classic-player-info">
                                                     <h4><a href="#">{{$mkeka->total_olds}}</a></h4>

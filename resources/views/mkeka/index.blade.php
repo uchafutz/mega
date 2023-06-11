@@ -34,13 +34,18 @@
                                                 @foreach ($mkekas as $mkeka)
                                                     <tr>
                                                         <td> {{ __('NO:000-') }}{{ $mkeka->id }}</td>
-                                                        <td><img src="storage/{{ $mkeka->picture }}" class="img-fluid rounded-start"
-                                                        alt="..." width="90px" height="40px"> </td>
+                                                        <td><img src="uploads/{{ $mkeka->picture }}" class="img-fluid rounded-start"
+                                                        alt="..." width="50px" height="40px"> </td>
                                                         <td>{{ $mkeka->total_olds }}</td>
                                                         <td>{{ $mkeka->price }}</td>
                                                         <td> {{ $mkeka->type }}</td>
-                                                        <th><img  src="storage/{{ $mkeka->featureImage }}" height="40px"
+                                                        <th>
+                                                            @if ($mkeka->type != "premier")
+                                                                
+                                                            @else
+                                                            <img  src="uploads/{{ $mkeka->featureImage }}" height="40px"
                                                                 width="80px" ></th>
+                                                            @endif
                                                       
                                                         <td>
                                                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -61,8 +66,12 @@
                                                                   
                                                                 </div>
                                                                 <div class="col">
+                                                                     @if ($mkeka->type != "premier")
+                                                                
+                                                                     @else
                                                                     <a href="{{ route('mkekas.show', ['mkeka' => $mkeka->id]) }}"
                                                                         class="btn btn-outline-success">show</a>
+                                                                    @endif
                                                                 </div>
                                                             </div>
                                                         </td>
