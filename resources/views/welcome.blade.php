@@ -11,10 +11,14 @@
 
                             <!--// Fancy Title \\-->
                             <div class="sportsmagazine-fancy-title">
-                                <center><h2>JOIN MEGA BET"S WINNER TEAM</h2></center>
+                                <center><h2> WINNER TEAM</h2></center>
+                               
+                           
+                                 
+                                    
                             </div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
-                            <div class="sportsmagazine-featured-slider">
+                            {{-- <div class="sportsmagazine-featured-slider">
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="images/home2.png" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
@@ -25,13 +29,42 @@
                                     <span class="sportsmagazine-black-transparent"></span>
                                  
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--// Featured Slider \\-->
+                           <div class="row">
+                            <div class="col-md-12">
+                            <div class="sportsmagazine-fancy-title-two"><h2><a  href="{{ route('subscriptions.index') }}"><h2>{{ __('Click here subscribe') }}</h2></a> <span></span></h2></div>
+                             <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
+                                   <ul>
+                                    @foreach ($mkekas as $mkeka)
+                                    <li>
+                                        <figure>
+                                            <a data-fancybox-group="group"  class="fancybox"><img src="uploads/{{$mkeka->picture}}" height="700px" alt=""><i class="icon-signs23"></i></a>
+                                          
+                                        </figure>
+                                    </li>
+                                        
+                                    @endforeach
+                                </ul>
+                            </div>
+                              </div>
+					
+                            <!--// Pagination \\-->
+                            <div class="sportsmagazine-pagination">
+                              <ul class="page-numbers">
+                                 <li>{{$mkekas->links()}}</li>
+                                
+                              </ul>
+                            </div>
+                            <!--// Pagination \\-->
+                        </div>
+
+
+					</div>
 
 
 
-
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-4">
                                     <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                                         <ul class="row">
@@ -99,7 +132,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> --}}
 
 
 

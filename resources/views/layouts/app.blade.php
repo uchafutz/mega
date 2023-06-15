@@ -42,7 +42,7 @@
                                     <a class="nav-link" href="{{ route('mkekas.index') }}">{{ __('Mkeka') }}</a>
                         </li>
                          <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('subscriptions.index') }}">{{ __('Subscriptions') }}</a>
+                            <a class="nav-link" href="{{ route('subscriptions.index') }}">{{ __('Subscriptions') }}</a>
                         </li>
 
                     </ul>

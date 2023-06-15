@@ -13,7 +13,8 @@ class WebController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $mkekas = Mkeka::where(["type" => "results"])->paginate();
+        return view('welcome', compact('mkekas'));
     }
 
     public function free()

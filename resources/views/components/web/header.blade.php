@@ -87,15 +87,15 @@
                                         <ul class="nav navbar-nav">
                                             <li class="{{Request::is('/') ? 'active':''}}"><a href="{{route('welcome')}}">Home</a>
                                             </li>
-                                            <li class="{{request()->is('free-bets*') ? 'active':''}}"><a href="{{route('free-bets')}}">FREE BETTS</a>
+                                            {{-- <li class="{{request()->is('free-bets*') ? 'active':''}}"><a href="{{route('free-bets')}}">FREE BETTS</a>
 
-                                            </li>
+                                            </li> --}}
                                             <li  class="{{request()->is('today*') ? 'active':''}}"><a href="{{ route('today')}}">TODAY BETTS</a>
 
                                             </li>
-                                            <li class="{{request()->is('results*') ? 'active':''}}"><a href="{{ route('results')}}">RESULTS</a>
+                                            {{-- <li class="{{request()->is('results*') ? 'active':''}}"><a href="{{ route('results')}}">RESULTS</a>
 
-                                            </li>
+                                            </li> --}}
                                             @auth
                                              <li class="{{request()->is('myorders*') ? 'active':''}}"><a href="{{ route('myorders')}}">My Order</a>
 
